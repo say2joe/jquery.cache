@@ -9,7 +9,8 @@
  */
 
 /**
- * @title
+ * @version 1.0
+ * @title jQuery Cache
  * @author Joe Johnson (say2joe@gmail.com)
  *
  * $.cache: Extends jQuery to allow for caching of jQuery objects.
@@ -18,12 +19,15 @@
  * of the same selector lookups throughout your code, this functionality
  * will dramatically increase the performance of your web application.
  *
- * @param  {String}			label		A label for the DOM node/collection to reference.
- * @param  {String}			selector	(optional) A valid Sizzle/jQuery selector.
- * @return {jQuery Object}				A chainable jQuery object representing the DOM.
+ * @param  {String} label		A label for the DOM node/collection to reference.
+ * @param  {String} selector	(optional) A valid Sizzle/jQuery selector.
+ * @return {jQuery Object}		A chainable jQuery object representing the DOM.
  */
+
 (function($){
+
 	var cache = {};
+
 	function updateElements() {
 		var coll = $(this.selector),
 			c = Math.max(this.length,coll.length);
@@ -37,6 +41,7 @@
 		this.length = coll.length;
 		return this;
 	}
+
 	$.extend({
 		cache: function( label, selector ) {
 			if (selector) {
@@ -47,4 +52,5 @@
 			return cache[label];
 		}
 	});
+
 })(jQuery);

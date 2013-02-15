@@ -18,6 +18,10 @@
  * of selector lookups on *persistent* DOM elements. If you have many
  * of the same selector lookups throughout your code, this functionality
  * will dramatically increase the performance of your web application.
+ * If a DOM node is removed from the document, the cache is updated.
+ *
+ * If you are using jQuery < 2.x, domCache is the plugin name. If you prefer
+ * to use domCache as the name, remove the conditional var "name" assigment.
  *
  * NOTE: Remove objects from the cache by passing an empty string selector.
  * NOTE: Do NOT bind events to nodes which may be removed from the document.
@@ -25,9 +29,6 @@
  * @param  {String} label		A label for the DOM node/collection to reference.
  * @param  {String} selector	(optional) A valid Sizzle/jQuery selector.
  * @return {jQuery Object}		A chainable jQuery object representing the DOM.
- *
- * If you are using jQuery < 2.x, domCache is the plugin name. If you prefer
- * to use domCache as the name, remove the conditional var "name" assigment.
  */
 
 (function($){
@@ -35,18 +36,6 @@
 	var cache = {},
 		extendMethods = {},
 		name = $.cache? "domCache" : "cache";
-
-	$(document).on("DOMNodeRemoved",function(event){
-		var label, coll, l;
-		for (label in cache) {
-			l = (coll = cache[label]).length;
-			while (l--) {
-				if (coll[l] === event.target) {
-					delete coll[l]; --coll.length;
-				}
-			}
-		}
-	});
 
 	function updateElements() {
 		var cached = this,
@@ -62,6 +51,18 @@
 		cached.length = jqo.length;
 		return cached;
 	}
+
+	$(document).on("DOMNodeRemoved",function(event){
+		var label, coll, l;
+		for (label in cache) {
+			l = (coll = cache[label]).length;
+			while (l--) {
+				if (coll[l] === event.target) {
+					delete coll[l]; --coll.length;
+				}
+			}
+		}
+	});
 
 	extendMethods[name] = function( label, selector ) {
 		if (selector) {

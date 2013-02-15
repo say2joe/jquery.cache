@@ -1,5 +1,5 @@
 /*!
- * jQuery Cookie Plugin
+ * jQuery Cache Plugin
  * https://github.com/say2joe/jquery.cache
  *
  * Copyright 2013, Joe Johnson

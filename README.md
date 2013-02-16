@@ -51,4 +51,4 @@ The refresh method lets you reset the cached object to include only the matching
 
 ## Example
 
-	[Gist DOM Cache Example](http://gist.github.com/say2joe/3841424)
+* [Gist DOM Cache Example](http://gist.github.com/say2joe/3841424/)

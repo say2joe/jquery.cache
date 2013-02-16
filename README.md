@@ -21,9 +21,9 @@ NOTE: $.cache is a hidden deprecated core property of jQuery (1.x) which is bein
 
 
 ## Usage
-$.domCache is the method used for all versions of jQuery < 2.x.
 
-If (built-in) $.cache property is non-existent, $.cache is used instead.
+If (the jQuery Core) $.cache property is non-existent, $.cache is used.
+$.domCache is the method used for all versions of jQuery < 2.x.
 
 ### Caching DOM Objects
 	$.domCache("videos",".yt,.vimeo").css({border:"1px solid blue"});
@@ -39,6 +39,7 @@ If (built-in) $.cache property is non-existent, $.cache is used instead.
 	$myForms.on("submit",function(){});
 
 ### Update the Collection
+The refresh method lets you reset the cached object to include only the matching elements (based on the original selector) currently in the DOM.
 	$.domCache("videos").refresh();
 
 ### Remove a Cached Object

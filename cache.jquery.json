@@ -23,5 +23,5 @@
 		"jquery": ">= 1.7"
 	},
 	"keywords": ["ui", "dom", "cache", "speed", "selector", "say2joe"],
-	"description": "Using $.cache (or $.domCache) may dramatically increase the performance of your web application by eliminating unnecessary DOM traversal. Manipulate the DOM (with event handling) more efficiently by calling cached DOM collections/elements. If you have many of the same selectors being used to find elements in your page, this plugin will help."
+	"description": "Using $.cache (or $.domCache) may dramatically increase the performance of your web application by eliminating unnecessary DOM traversal. Manipulate the DOM (with event handling) more efficiently by calling cached DOM collections / elements. If you have many of the same selectors being used to find elements in your page, this plugin will help."
 }

@@ -1,9 +1,12 @@
 {
-	"version": "1.1.0",
-	"name": "dom.cache",
+	"version": "1.1.1",
+	"name": "cache",
 	"title": "jQuery DOM Cache",
-	"author": "Joe Johnson (say2joe)",
-	"url": "http://github.com/say2joe/jquery.cache",
+	"author": {
+		"name": "Joe Johnson",
+		"email": "say2joe@gmail.com",
+		"url": "http://github.com/say2joe/"
+	},
 	"docs": "https://github.com/say2joe/jquery.cache/blob/master/README.md",
 	"licenses": [{
 		"type": "MIT",
@@ -19,6 +22,6 @@
 	"dependencies": {
 		"jquery": ">= 1.7"
 	},
-	"keywords": ["ui", "dom", "cache", "speed", "selector"],
+	"keywords": ["ui", "dom", "cache", "speed", "selector", "say2joe"],
 	"description": "Using $.cache (or $.domCache) may dramatically increase the performance of you web application by eliminating unnecessary DOM traversal. Manipulate your DOM (with event handling) more efficiently by calling cached DOM collections/elements. If you have many of the same selectors being used to find elements in your page, this plugin will help. Visit the GitHub page for more information."
 }

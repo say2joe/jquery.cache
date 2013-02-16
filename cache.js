@@ -9,7 +9,7 @@
  */
 
 /**
- * @version 1.0
+ * @version 1.1.1
  * @title jQuery Cache
  * @author Joe Johnson (say2joe@gmail.com)
  *

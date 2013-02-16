@@ -40,6 +40,7 @@ $.domCache is the method used for all versions of jQuery < 2.x.
 
 ### Update the Collection
 The refresh method lets you reset the cached object to include only the matching elements (based on the original selector) currently in the DOM.
+
 	$.domCache("videos").refresh();
 
 ### Remove a Cached Object

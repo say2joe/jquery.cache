@@ -9,7 +9,7 @@
  */
 
 /**
- * @version 1.1.5
+ * @version 1.2.0
  * @title jQuery Cache
  * @author Joe Johnson (say2joe@gmail.com)
  *
@@ -37,6 +37,18 @@
 		extendMethods = {},
 		name = $.cache? "domCache" : "cache";
 
+	function nodeRemovalListener(event){
+		var label, coll, l, t = event.target;
+		for (label in cache) {
+			l = (coll = cache[label]).length;
+			while (l--) {
+				if (coll[l] === t || $.contains(t,coll[l])) {
+					delete coll[l]; --coll.length;
+				}
+			}
+		}
+	}
+
 	function updateElements() {
 		var cached = this,
 			jqo = $(cached.selector),
@@ -52,18 +64,6 @@
 		return cached;
 	}
 
-	$(document).on("DOMNodeRemoved",function(event){
-		var label, coll, l;
-		for (label in cache) {
-			l = (coll = cache[label]).length;
-			while (l--) {
-				if (coll[l] === event.target) {
-					delete coll[l]; --coll.length;
-				}
-			}
-		}
-	});
-
 	extendMethods[name] = function( label, selector ) {
 		if (selector) {
 			cache[label] = $(selector);
@@ -74,6 +74,8 @@
 		}
 		return cache[label];
 	};
+
+	$(document).on("DOMNodeRemoved",nodeRemovalListener);
 
 	$.extend(extendMethods);
 

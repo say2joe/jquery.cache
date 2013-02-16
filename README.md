@@ -15,6 +15,8 @@ to use domCache as the name, remove the conditional var "name" assigment.
 
 Remove objects from the cache by passing an empty string selector.
 
+Refresh the cached collection with only what exists in the current DOM.
+
 Do NOT bind events to nodes which may be removed from the document.
 
 NOTE: $.cache is a hidden deprecated core property of jQuery (1.x) which is being removed.

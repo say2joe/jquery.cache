@@ -47,3 +47,8 @@ The refresh method lets you reset the cached object to include only the matching
 
 ### Remove a Cached Object
 	$.domCache("forms",'');
+
+
+## Example
+
+	[Gist DOM Cache Example](http://gist.github.com/say2joe/3841424)

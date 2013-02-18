@@ -9,7 +9,7 @@
  */
 
 /**
- * @version 1.2.1
+ * @version 1.2.2
  * @title jQuery DOM Cache Plugin
  * @author Joe Johnson (say2joe@gmail.com)
  *
@@ -72,7 +72,7 @@
 		} else if (selector === '') {
 			delete cache[label];
 		}
-		return cache[label];
+		return cache[label] || $();
 	};
 
 	$(document).on("DOMNodeRemoved",nodeRemovalHandler);

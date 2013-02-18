@@ -9,7 +9,7 @@
  */
 
 /**
- * @version 1.2.0
+ * @version 1.2.1
  * @title jQuery DOM Cache Plugin
  * @author Joe Johnson (say2joe@gmail.com)
  *
@@ -37,7 +37,7 @@
 		extendMethods = {},
 		name = $.cache? "domCache" : "cache";
 
-	function nodeRemovalListener(event){
+	function nodeRemovalHandler(event){
 		var label, coll, l, t = event.target;
 		for (label in cache) {
 			l = (coll = cache[label]).length;
@@ -75,7 +75,7 @@
 		return cache[label];
 	};
 
-	$(document).on("DOMNodeRemoved",nodeRemovalListener);
+	$(document).on("DOMNodeRemoved",nodeRemovalHandler);
 
 	$.extend(extendMethods);
 

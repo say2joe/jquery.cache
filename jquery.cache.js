@@ -9,7 +9,7 @@
  */
 
 /**
- * @version 1.2.2
+ * @version 1.2.3
  * @title jQuery DOM Cache Plugin
  * @author Joe Johnson (say2joe@gmail.com)
  *

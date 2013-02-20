@@ -1,13 +1,12 @@
 {
-	"version": "1.2.5",
 	"name": "cache",
+	"version": "1.2.5",
 	"title": "jQuery DOM Cache",
 	"author": {
 		"name": "Joe Johnson",
 		"email": "say2joe@gmail.com",
 		"url": "http://github.com/say2joe/"
 	},
-	"docs": "https://github.com/say2joe/jquery.cache/blob/master/README.md",
 	"licenses": [{
 		"type": "MIT",
 		"url": "http://www.opensource.org/licenses/mit-license.php"
@@ -19,9 +18,8 @@
 		"type": "git",
 		"url": "https://github.com/say2joe/jquery.cache.git"
 	},
-	"dependencies": {
-		"jquery": ">= 1.0"
-	},
-	"keywords": ["jquery","ui","dom","traversal","cache","speed","selector","say2joe"],
+	"dependencies": { "jquery": ">= 1.0" },
+	"docs": "https://github.com/say2joe/jquery.cache/blob/master/README.md",
+	"keywords": ["jquery","dom","cache","traversal","manipulation","ui","speed","selector","say2joe"],
 	"description": "Using $.cache (or $.domCache) may dramatically increase the performance of your web application by eliminating unnecessary DOM traversal. Manipulate the DOM (with event handling) more efficiently by referencing cached DOM elements."
 }

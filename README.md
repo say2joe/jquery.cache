@@ -33,7 +33,7 @@ $.domCache is the method used for all versions of jQuery < 2.x.
 	$.domCache("forms","form");
 
 ### Retrieving Cached Objects
-	$.domCache("animImages").show("show");
+	$.domCache("animImages").show("slow");
 	$.domCache("videos").fadeOut();
 
 ### Create a Local Reference
